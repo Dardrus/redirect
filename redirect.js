@@ -147,6 +147,19 @@ function redirectToDefaultLanguage(defaultLanguage, activeLanguage) {
     }
 }
 
+function getCurrentLanguage() {
+    const pathname = window.location.pathname;
+    // Извлечение части URL после первого слэша
+    const languageSegment = pathname.split('/')[1]; // Получаем сегмент между первыми двумя слэшами
+
+    // Проверка, существует ли такой языковой код
+    if (languageCodes.includes(languageSegment)) {
+        return languageSegment;
+    } else {
+        return defaultLanguage;
+    }
+}
+
 addEventListener('DOMContentLoaded', function () {
     // Нахождение всех языковых ссылок на странице
     const languageLinks = document.querySelectorAll('[data-redirect] a');
