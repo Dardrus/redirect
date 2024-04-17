@@ -10,6 +10,7 @@
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/Dardrus/Redirect@v1.0.0/redirect.js"></script>
+```
 
 ### Шаг 2: Создайте локальный файл `redirect.js`
 
@@ -17,6 +18,7 @@
 
 ```html
 <script src="js/redirect.js"></script>
+```
 
 ### Шаг 3: Инициализируйте перенаправление
 
@@ -28,6 +30,7 @@ const languageCodes = ['en', 'es', 'pl']; // Список поддерживае
 const activeLanguage = getCurrentLanguage(); // Автоматическое определение текущего языка пользователя
 
 initRedirect(defaultLanguage, languageCodes, activeLanguage);
+```
 
 #### Описание переменных
 
