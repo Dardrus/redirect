@@ -1,5 +1,5 @@
+// test v1.0.0
 const languageChangedManually = localStorage.getItem('languageChangedManually');
-
 
 const countriesGermanLanguage = ['lu', 'li', 'at', 'ch'];
 const countriesDutchLanguage = ['be'];
