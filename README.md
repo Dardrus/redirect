@@ -49,7 +49,7 @@ initRedirect(defaultLanguage, languageCodes, activeLanguage);
     );
 </script>
 ```
-Готово:))
+Готово, все очеень просто!
 
 ## Важно!
 ### Обязательным условием корректной работы `redirect.js` является присвоение атрибута `data-redirect` для списка языков в HTML разметке.
