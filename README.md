@@ -39,8 +39,8 @@ initRedirect(defaultLanguage, languageCodes, activeLanguage);
 Добавьте следующий код перед закрывающим тегом `</head>` на вашем сайте:
 
 ```html
-// Получение данных о языках из PHP и передача в JavaScript на основе плагина `polylang`
 <script type="text/javascript">
+// Получение данных о языках из PHP и передача в JavaScript на основе плагина `polylang`
     var polylang = {
         current_language: '<?php echo pll_current_language("slug"); ?>',
         default_language: '<?php echo pll_default_language("slug"); ?>',
