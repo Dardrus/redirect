@@ -39,36 +39,17 @@ initRedirect(defaultLanguage, languageCodes, activeLanguage);
 Добавьте следующий код перед закрывающим тегом `</head>` на вашем сайте:
 
 ```html
-<script type="text/javascript">
-// Получение данных о языках из PHP и передача в JavaScript на основе плагина `polylang`
-    var polylang = {
-        current_language: '<?php echo pll_current_language("slug"); ?>',
-        default_language: '<?php echo pll_default_language("slug"); ?>',
-        languages: <?php echo json_encode(pll_languages_list(array('fields' => 'slug'))); ?>
-    };
-</script>
 <script src="https://cdn.jsdelivr.net/gh/Dardrus/redirect@v1.0.0/script.js"></script>
+<script type="text/javascript">
+    // Получение данных о языках из PHP и передача в JavaScript на основе плагина `polylang`
+    initRedirect(
+        '<?php echo pll_default_language("slug"); ?>',
+        <?php echo json_encode(pll_languages_list(array('fields' => 'slug'))); ?>,
+        '<?php echo pll_current_language("slug"); ?>'
+    );
+</script>
 ```
-
-### Шаг 2: Создайте локальный файл `redirect.js`
-
-Создайте файл `redirect.js` в директории `js` вашего сайта и подключите его следующим образом:
-
-```html
-<script src="<?php echo get_template_directory_uri(); ?>/js/redirect.js"></script>
-```
-
-### Шаг 3: Инициализируйте перенаправление
-
-Откройте файл `redirect.js` и добавьте в него следующий код для инициализации скрипта:
-
-```javascript
-const defaultLanguage = polylang.default_language; // Язык по умолчанию на сайте
-const languageCodes = polylang.languages || []; // Список поддерживаемых языков на сайте
-const activeLanguage = polylang.current_language || 'default'; // Текущий язык пользователя
-
-initRedirect(defaultLanguage, languageCodes, activeLanguage);
-```
+Готово:))
 
 ## Важно!
 ### Обязательным условием корректной работы `redirect.js` является присвоение атрибута `data-redirect` для списка языков в HTML разметке.
