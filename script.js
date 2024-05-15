@@ -1,6 +1,7 @@
 // test v1.0.0
 const languageChangedManually = localStorage.getItem('languageChangedManually');
 
+const countriesEnglishLanguage = ['us', 'gb', 'ca', 'au', 'nz', 'ie'];
 const countriesGermanLanguage = ['lu', 'li', 'at', 'ch'];
 const countriesDutchLanguage = ['be'];
 const countriesFrenchLanguage = ['ca', 'be'];
@@ -37,6 +38,8 @@ function initRedirect(defaultLanguage, languageCodes, activeLanguage) {
                 // Проверка, существует ли версия сайта для страны пользователя и что это не дефолтная версия
                 if (languageCodes.includes(countryCode) && countryCode !== defaultLanguage) {
                     updateUrlWithLanguageCode(countryCode, languageCodes);
+                } else if (countriesEnglishLanguage.includes(countryCode) && languageCodes.includes('en')) {
+                    updateUrlWithLanguageCode('en', languageCodes);
                 } else if (countriesGermanLanguage.includes(countryCode) && languageCodes.includes('de')) {
                     updateUrlWithLanguageCode('de', languageCodes);
                 } else if (countriesDutchLanguage.includes(countryCode) && languageCodes.includes('nl')) {
