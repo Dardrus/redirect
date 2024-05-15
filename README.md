@@ -9,7 +9,7 @@
 Добавьте следующий код перед закрывающим тегом `</head>` на вашем сайте:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Dardrus/redirect@v1.0.0/script.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Dardrus/redirect@v1.0.1/script.js"></script>
 ```
 
 ### Шаг 2: Создайте локальный файл `redirect.js`
