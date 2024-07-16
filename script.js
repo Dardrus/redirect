@@ -3,6 +3,7 @@ const languageChangedManually = localStorage.getItem('languageChangedManually');
 // Определение языков для стран в виде объекта
 const countryLanguageMap = {
 	en: ['us', 'gb', 'ca', 'au', 'nz', 'ie'],
+	da: ['dk'],
 	de: ['lu', 'li', 'at', 'ch'],
 	nl: ['be'],
 	fr: ['ca', 'be'],
