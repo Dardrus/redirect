@@ -8,6 +8,7 @@ const countryLanguageMap = {
 	nl: ['be'],
 	fr: ['ca', 'be'],
 	zh: ['sg', 'hk', 'cn'],
+	et: ['ee'],
 	es: ['cl', 'pe', 'pa', 'mx', 'sv', 'gt', 'uy', 'cr'],
 	pt: ['br'],
 	ru: ['lt', 'lv', 'ee', 'ua', 'kz'],
