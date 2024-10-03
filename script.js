@@ -16,6 +16,7 @@ const countryLanguageMap = {
 	cs: ['cz'],
 	ja: ['jp'],
 	zh: ['cn'],
+	ms: ['my'],
 };
 
 function initRedirect(defaultLanguage, languageCodes, activeLanguage) {
